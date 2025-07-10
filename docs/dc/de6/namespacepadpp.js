@@ -10,10 +10,10 @@ var namespacepadpp =
     [ "Pkcs7BytePadder", "d9/dfc/structpadpp_1_1Pkcs7BytePadder.html", "d9/dfc/structpadpp_1_1Pkcs7BytePadder" ],
     [ "Range", "d8/df6/structpadpp_1_1Range.html", "d8/df6/structpadpp_1_1Range" ],
     [ "Version", "d7/d17/structpadpp_1_1Version.html", "d7/d17/structpadpp_1_1Version" ],
-    [ "ExpectationHint", "dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411", [
-      [ "Eq", "dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3", null ],
-      [ "Ne", "dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498", null ]
+    [ "ExpectationHint", "d4/d9a/group__cppapi.html#gad6339f419e1b3fe38b094759fd23d411", [
+      [ "Eq", "d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3", null ],
+      [ "Ne", "d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498", null ]
     ] ],
-    [ "operator<<", "dc/de6/namespacepadpp.html#aa44f7860282623f727802f35a623e536", null ],
-    [ "to_string", "dc/de6/namespacepadpp.html#aeaf4614e8c408a2f1967810f9e8b349a", null ]
+    [ "operator<<", "d4/d9a/group__cppapi.html#gaa44f7860282623f727802f35a623e536", null ],
+    [ "to_string", "d4/d9a/group__cppapi.html#gaeaf4614e8c408a2f1967810f9e8b349a", null ]
 ];

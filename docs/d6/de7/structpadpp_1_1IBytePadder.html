@@ -88,9 +88,12 @@ $(function(){initNavTree('d6/de7/structpadpp_1_1IBytePadder.html','../../','d1/d
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">padpp::IBytePadder Struct Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">padpp::IBytePadder Struct Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="../../d4/d9a/group__cppapi.html">C++ API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Abstract base class for byte-level padder algorithms.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -102,18 +105,25 @@ Inheritance diagram for padpp::IBytePadder:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a59e0bdb894a578dc6dd926ca49dabe23" id="r_a59e0bdb894a578dc6dd926ca49dabe23"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59e0bdb894a578dc6dd926ca49dabe23">size_type</a> = std::size_t</td></tr>
+<tr class="memdesc:a59e0bdb894a578dc6dd926ca49dabe23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for byte counts and lengths.  <br /></td></tr>
 <tr class="memitem:abb3a4132685359eadd64025143f2706b" id="r_abb3a4132685359eadd64025143f2706b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb3a4132685359eadd64025143f2706b">byte_span</a> = std::span&lt;std::uint8_t&gt;</td></tr>
+<tr class="memdesc:abb3a4132685359eadd64025143f2706b"><td class="mdescLeft">&#160;</td><td class="mdescRight">View over a buffer of bytes.  <br /></td></tr>
 <tr class="memitem:a26fba65ed0c8d3d283684048452cea32" id="r_a26fba65ed0c8d3d283684048452cea32"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26fba65ed0c8d3d283684048452cea32">byte_buffer</a> = std::vector&lt;std::uint8_t&gt;</td></tr>
+<tr class="memdesc:a26fba65ed0c8d3d283684048452cea32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writable dynamic byte buffer.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aec1636bf283b6cd8e2c1d6b65ef52d31" id="r_aec1636bf283b6cd8e2c1d6b65ef52d31"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec1636bf283b6cd8e2c1d6b65ef52d31">pad</a> (<a class="el" href="#a26fba65ed0c8d3d283684048452cea32">byte_buffer</a> &amp;dst, <a class="el" href="#abb3a4132685359eadd64025143f2706b">byte_span</a> src, <a class="el" href="#a59e0bdb894a578dc6dd926ca49dabe23">size_type</a> blk_sz) const =0</td></tr>
+<tr class="memdesc:aec1636bf283b6cd8e2c1d6b65ef52d31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies padding to <span class="tt">src</span>, writing to <span class="tt">dst</span>.  <br /></td></tr>
 <tr class="memitem:abd67c7349a434a583ee8f3e7919bc838" id="r_abd67c7349a434a583ee8f3e7919bc838"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd67c7349a434a583ee8f3e7919bc838">unpad</a> (<a class="el" href="#a26fba65ed0c8d3d283684048452cea32">byte_buffer</a> &amp;dst, <a class="el" href="#abb3a4132685359eadd64025143f2706b">byte_span</a> src, <a class="el" href="#a59e0bdb894a578dc6dd926ca49dabe23">size_type</a> blk_sz) const =0</td></tr>
+<tr class="memdesc:abd67c7349a434a583ee8f3e7919bc838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes padding from <span class="tt">src</span>, writing to <span class="tt">dst</span>.  <br /></td></tr>
 <tr class="memitem:a298b6bc2eff9b56242aed362215cb202" id="r_a298b6bc2eff9b56242aed362215cb202"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a298b6bc2eff9b56242aed362215cb202">~IBytePadder</a> ()=default</td></tr>
+<tr class="memdesc:a298b6bc2eff9b56242aed362215cb202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for safe polymorphic usage.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html#l00011">11</a> of file <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>.</p>
+<div class="textblock"><p>Abstract base class for byte-level padder algorithms. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html#l00030">30</a> of file <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a26fba65ed0c8d3d283684048452cea32" name="a26fba65ed0c8d3d283684048452cea32"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26fba65ed0c8d3d283684048452cea32">&#9670;&#160;</a></span>byte_buffer</h2>
@@ -127,7 +137,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html#l00016">16</a> of file <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>.</p>
+<p>Writable dynamic byte buffer. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html#l00039">39</a> of file <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>.</p>
 
 </div>
 </div>
@@ -143,7 +155,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html#l00015">15</a> of file <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>.</p>
+<p>View over a buffer of bytes. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html#l00036">36</a> of file <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>.</p>
 
 </div>
 </div>
@@ -159,7 +173,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html#l00013">13</a> of file <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>.</p>
+<p>Type for byte counts and lengths. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html#l00033">33</a> of file <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>.</p>
 
 </div>
 </div>
@@ -186,6 +202,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Virtual destructor for safe polymorphic usage. </p>
 
 </div>
 </div>
@@ -222,6 +240,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Applies padding to <span class="tt">src</span>, writing to <span class="tt">dst</span>. </p>
+<p>Implementations must align <span class="tt">src</span> to the specified <span class="tt">blk_sz</span>, writing the result into <span class="tt">dst</span>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>Destination buffer to receive padded data. </td></tr>
+    <tr><td class="paramname">src</td><td>Input buffer (unmodified). </td></tr>
+    <tr><td class="paramname">blk_sz</td><td>Block size for alignment. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="../../dc/d4e/structpadpp_1_1Ansi923BytePadder.html#ac99cef7ae5f9b83a57aae26ed496811f">padpp::Ansi923BytePadder</a>, <a class="el" href="../../d7/d6e/structpadpp_1_1ISO9797__M1__BytePadder.html#a99eab6da4aec4aef564d1adaef648d1f">padpp::ISO9797_M1_BytePadder</a>, <a class="el" href="../../d4/d68/structpadpp_1_1ISO9797__M2__BytePadder.html#a808cd90a13de766c5e89ee74e9171f74">padpp::ISO9797_M2_BytePadder</a>, and <a class="el" href="../../d9/dfc/structpadpp_1_1Pkcs7BytePadder.html#ab2b1cf38f83a2bd8d0d1ae3c9a0028a4">padpp::Pkcs7BytePadder</a>.</p>
 
 </div>
@@ -257,6 +286,17 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Removes padding from <span class="tt">src</span>, writing to <span class="tt">dst</span>. </p>
+<p>Implementations must detect and strip the padding applied during <span class="tt"><a class="el" href="#aec1636bf283b6cd8e2c1d6b65ef52d31" title="Applies padding to src, writing to dst.">pad()</a></span>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>Destination buffer to receive unpadded data. </td></tr>
+    <tr><td class="paramname">src</td><td>Padded input buffer. </td></tr>
+    <tr><td class="paramname">blk_sz</td><td>Block size originally used for padding. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="../../dc/d4e/structpadpp_1_1Ansi923BytePadder.html#af30f6956a8dbe438df7facaaab6411ca">padpp::Ansi923BytePadder</a>, <a class="el" href="../../d7/d6e/structpadpp_1_1ISO9797__M1__BytePadder.html#a4d1ceff83d97ee6ae46dcb0aa0958ba5">padpp::ISO9797_M1_BytePadder</a>, <a class="el" href="../../d4/d68/structpadpp_1_1ISO9797__M2__BytePadder.html#ae5c45fb3600b75648b6bd594b8bfc5a8">padpp::ISO9797_M2_BytePadder</a>, and <a class="el" href="../../d9/dfc/structpadpp_1_1Pkcs7BytePadder.html#a3bb01133c0fc94f1277c802eb4591da7">padpp::Pkcs7BytePadder</a>.</p>
 

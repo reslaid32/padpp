@@ -7,5 +7,5 @@ digraph "Graphical Class Hierarchy"
   rankdir="LR";
   Node0 [id="Node000000",label="std::exception",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node0 -> Node1 [id="edge5_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 [id="Node000001",label="padpp::invalid_value\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/dfb/structpadpp_1_1invalid__value.html",tooltip=" "];
+  Node1 [id="Node000001",label="padpp::invalid_value\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/dfb/structpadpp_1_1invalid__value.html",tooltip="Exception thrown for invalid input values."];
 }

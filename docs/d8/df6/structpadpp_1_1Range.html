@@ -88,9 +88,12 @@ $(function(){initNavTree('d8/df6/structpadpp_1_1Range.html','../../','de/d39/str
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">padpp::Range&lt; T &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">padpp::Range&lt; T &gt; Struct Template Reference<div class="ingroups"><a class="el" href="../../d4/d9a/group__cppapi.html">C++ API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a range of values from <span class="tt">min</span> to <span class="tt">max</span> inclusive.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -98,23 +101,40 @@ $(function(){initNavTree('d8/df6/structpadpp_1_1Range.html','../../','de/d39/str
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3bb734d68e1dde40ff446988c8465ed" id="r_ab3bb734d68e1dde40ff446988c8465ed"><td class="memTemplParams" colspan="2">template&lt;typename U, typename V&gt; </td></tr>
 <tr class="memitem:ab3bb734d68e1dde40ff446988c8465ed template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3bb734d68e1dde40ff446988c8465ed">Range</a> (U &amp;&amp;<a class="el" href="#a796061be96b7fedff05efd3f5690616e">min</a>, V &amp;&amp;<a class="el" href="#aa3ac6577cb1e84710484563966df746a">max</a>)</td></tr>
+<tr class="memdesc:ab3bb734d68e1dde40ff446988c8465ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a range from given minimum and maximum.  <br /></td></tr>
 <tr class="memitem:a95a2e2549dda6003b94c46acfbd15ad2" id="r_a95a2e2549dda6003b94c46acfbd15ad2"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:a95a2e2549dda6003b94c46acfbd15ad2 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95a2e2549dda6003b94c46acfbd15ad2">within</a> (const U &amp;v) const</td></tr>
+<tr class="memdesc:a95a2e2549dda6003b94c46acfbd15ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a value lies within the range, inclusive.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a62a4f53ecc2915f5efed9c73908c2b6d" id="r_a62a4f53ecc2915f5efed9c73908c2b6d"><td class="memTemplParams" colspan="2">template&lt;typename U, typename V&gt; </td></tr>
 <tr class="memitem:a62a4f53ecc2915f5efed9c73908c2b6d template"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/df6/structpadpp_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62a4f53ecc2915f5efed9c73908c2b6d">create</a> (U &amp;&amp;<a class="el" href="#a796061be96b7fedff05efd3f5690616e">min</a>, V &amp;&amp;<a class="el" href="#aa3ac6577cb1e84710484563966df746a">max</a>)</td></tr>
+<tr class="memdesc:a62a4f53ecc2915f5efed9c73908c2b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method to create a <a class="el" href="../../d8/df6/structpadpp_1_1Range.html" title="Represents a range of values from min to max inclusive.">Range</a> with deduced common type.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a796061be96b7fedff05efd3f5690616e" id="r_a796061be96b7fedff05efd3f5690616e"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a796061be96b7fedff05efd3f5690616e">min</a></td></tr>
+<tr class="memdesc:a796061be96b7fedff05efd3f5690616e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum value of the range.  <br /></td></tr>
 <tr class="memitem:aa3ac6577cb1e84710484563966df746a" id="r_aa3ac6577cb1e84710484563966df746a"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3ac6577cb1e84710484563966df746a">max</a></td></tr>
+<tr class="memdesc:aa3ac6577cb1e84710484563966df746a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum value of the range.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-struct padpp::Range&lt; T &gt;</div>
-<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00010">10</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
+struct padpp::Range&lt; T &gt;</div><p>Represents a range of values from <span class="tt">min</span> to <span class="tt">max</span> inclusive. </p>
+<p>Template parameter <span class="tt">T</span> specifies the type of the range bounds.</p>
+<p>Provides a static factory method <span class="tt"><a class="el" href="#a62a4f53ecc2915f5efed9c73908c2b6d" title="Factory method to create a Range with deduced common type.">create()</a></span> for deducing common type from heterogeneous arguments.</p>
+<p>Example usage: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> r = <a class="code hl_function" href="#a62a4f53ecc2915f5efed9c73908c2b6d">padpp::Range&lt;int&gt;::create</a>(1, 5);</div>
+<div class="line"><span class="keywordtype">bool</span> inside = r.within(3); <span class="comment">// true</span></div>
+<div class="ttc" id="astructpadpp_1_1Range_html_a62a4f53ecc2915f5efed9c73908c2b6d"><div class="ttname"><a href="#a62a4f53ecc2915f5efed9c73908c2b6d">padpp::Range::create</a></div><div class="ttdeci">static Range create(U &amp;&amp;min, V &amp;&amp;max)</div><div class="ttdoc">Factory method to create a Range with deduced common type.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db6/Range_8h_source.html#l00052">Range.h:52</a></div></div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of the range bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00036">36</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab3bb734d68e1dde40ff446988c8465ed" name="ab3bb734d68e1dde40ff446988c8465ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3bb734d68e1dde40ff446988c8465ed">&#9670;&#160;</a></span>Range()</h2>
@@ -147,13 +167,30 @@ template&lt;typename U, typename V&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00023">23</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                          : <a class="code hl_variable" href="#a796061be96b7fedff05efd3f5690616e">min</a>(<a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">std::forward&lt;U&gt;</a>(<a class="code hl_variable" href="#a796061be96b7fedff05efd3f5690616e">min</a>)), <a class="code hl_variable" href="#aa3ac6577cb1e84710484563966df746a">max</a>(<a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">std::forward&lt;V&gt;</a>(<a class="code hl_variable" href="#aa3ac6577cb1e84710484563966df746a">max</a>))</div>
-<div class="line"><span class="lineno">   24</span>  {</div>
-<div class="line"><span class="lineno">   25</span>  }</div>
-<div class="ttc" id="astructpadpp_1_1Range_html"><div class="ttname"><a href="../../d8/df6/structpadpp_1_1Range.html">padpp::Range</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/db6/Range_8h_source.html#l00010">Range.h:11</a></div></div>
-<div class="ttc" id="astructpadpp_1_1Range_html_a796061be96b7fedff05efd3f5690616e"><div class="ttname"><a href="#a796061be96b7fedff05efd3f5690616e">padpp::Range::min</a></div><div class="ttdeci">T min</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db6/Range_8h_source.html#l00020">Range.h:20</a></div></div>
-<div class="ttc" id="astructpadpp_1_1Range_html_aa3ac6577cb1e84710484563966df746a"><div class="ttname"><a href="#aa3ac6577cb1e84710484563966df746a">padpp::Range::max</a></div><div class="ttdeci">T max</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db6/Range_8h_source.html#l00020">Range.h:20</a></div></div>
+<p>Constructs a range from given minimum and maximum. </p>
+<p>Accepts heterogeneous types convertible to <span class="tt">T</span>.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Type of min argument. </td></tr>
+    <tr><td class="paramname">V</td><td>Type of max argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>Minimum bound. </td></tr>
+    <tr><td class="paramname">max</td><td>Maximum bound. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00074">74</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>                          : <a class="code hl_variable" href="#a796061be96b7fedff05efd3f5690616e">min</a>(<a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">std::forward&lt;U&gt;</a>(<a class="code hl_variable" href="#a796061be96b7fedff05efd3f5690616e">min</a>)), <a class="code hl_variable" href="#aa3ac6577cb1e84710484563966df746a">max</a>(<a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">std::forward&lt;V&gt;</a>(<a class="code hl_variable" href="#aa3ac6577cb1e84710484563966df746a">max</a>))</div>
+<div class="line"><span class="lineno">   75</span>  {</div>
+<div class="line"><span class="lineno">   76</span>  }</div>
+<div class="ttc" id="astructpadpp_1_1Range_html"><div class="ttname"><a href="../../d8/df6/structpadpp_1_1Range.html">padpp::Range</a></div><div class="ttdoc">Represents a range of values from min to max inclusive.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db6/Range_8h_source.html#l00036">Range.h:37</a></div></div>
+<div class="ttc" id="astructpadpp_1_1Range_html_a796061be96b7fedff05efd3f5690616e"><div class="ttname"><a href="#a796061be96b7fedff05efd3f5690616e">padpp::Range::min</a></div><div class="ttdeci">T min</div><div class="ttdoc">Minimum value of the range.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db6/Range_8h_source.html#l00059">Range.h:59</a></div></div>
+<div class="ttc" id="astructpadpp_1_1Range_html_aa3ac6577cb1e84710484563966df746a"><div class="ttname"><a href="#aa3ac6577cb1e84710484563966df746a">padpp::Range::max</a></div><div class="ttdeci">T max</div><div class="ttdoc">Maximum value of the range.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db6/Range_8h_source.html#l00061">Range.h:61</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -189,12 +226,30 @@ template&lt;typename U, typename V&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00014">14</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>  {</div>
-<div class="line"><span class="lineno">   16</span>    <span class="keyword">using </span><a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">DeducedT</a> = <a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">std::common_type_t&lt;U, V&gt;</a>;</div>
-<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#ab3bb734d68e1dde40ff446988c8465ed">Range&lt;DeducedT&gt;</a>(<a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">std::forward&lt;U&gt;</a>(<a class="code hl_variable" href="#a796061be96b7fedff05efd3f5690616e">min</a>), <a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">std::forward&lt;V&gt;</a>(<a class="code hl_variable" href="#aa3ac6577cb1e84710484563966df746a">max</a>));</div>
-<div class="line"><span class="lineno">   18</span>  }</div>
-<div class="ttc" id="astructpadpp_1_1Range_html_ab3bb734d68e1dde40ff446988c8465ed"><div class="ttname"><a href="#ab3bb734d68e1dde40ff446988c8465ed">padpp::Range::Range</a></div><div class="ttdeci">Range(U &amp;&amp;min, V &amp;&amp;max)</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db6/Range_8h_source.html#l00023">Range.h:23</a></div></div>
+<p>Factory method to create a <a class="el" href="../../d8/df6/structpadpp_1_1Range.html" title="Represents a range of values from min to max inclusive.">Range</a> with deduced common type. </p>
+<p>Accepts heterogeneous types <span class="tt">U</span> and <span class="tt">V</span> and returns a <a class="el" href="../../d8/df6/structpadpp_1_1Range.html" title="Represents a range of values from min to max inclusive.">Range</a> with the common type of both arguments.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Type of the minimum bound argument. </td></tr>
+    <tr><td class="paramname">V</td><td>Type of the maximum bound argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>Minimum bound value. </td></tr>
+    <tr><td class="paramname">max</td><td>Maximum bound value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d8/df6/structpadpp_1_1Range.html" title="Represents a range of values from min to max inclusive.">Range</a> with deduced common type. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00052">52</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>  {</div>
+<div class="line"><span class="lineno">   54</span>    <span class="keyword">using </span><a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">DeducedT</a> = <a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">std::common_type_t&lt;U, V&gt;</a>;</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#ab3bb734d68e1dde40ff446988c8465ed">Range&lt;DeducedT&gt;</a>(<a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">std::forward&lt;U&gt;</a>(<a class="code hl_variable" href="#a796061be96b7fedff05efd3f5690616e">min</a>), <a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">std::forward&lt;V&gt;</a>(<a class="code hl_variable" href="#aa3ac6577cb1e84710484563966df746a">max</a>));</div>
+<div class="line"><span class="lineno">   56</span>  }</div>
+<div class="ttc" id="astructpadpp_1_1Range_html_ab3bb734d68e1dde40ff446988c8465ed"><div class="ttname"><a href="#ab3bb734d68e1dde40ff446988c8465ed">padpp::Range::Range</a></div><div class="ttdeci">Range(U &amp;&amp;min, V &amp;&amp;max)</div><div class="ttdoc">Constructs a range from given minimum and maximum.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db6/Range_8h_source.html#l00074">Range.h:74</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -225,10 +280,25 @@ template&lt;typename U&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00030">30</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>  {</div>
-<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">v</a> &gt;= <a class="code hl_variable" href="#a796061be96b7fedff05efd3f5690616e">min</a> &amp;&amp; <a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">v</a> &lt;= <a class="code hl_variable" href="#aa3ac6577cb1e84710484563966df746a">max</a>;</div>
-<div class="line"><span class="lineno">   33</span>  }</div>
+<p>Checks if a value lies within the range, inclusive. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Type of the value to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>Value to test. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if <span class="tt">v</span> in <span class="tt">[min, max]</span>, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00087">87</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>  {</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">v</a> &gt;= <a class="code hl_variable" href="#a796061be96b7fedff05efd3f5690616e">min</a> &amp;&amp; <a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">v</a> &lt;= <a class="code hl_variable" href="#aa3ac6577cb1e84710484563966df746a">max</a>;</div>
+<div class="line"><span class="lineno">   90</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -247,7 +317,9 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00020">20</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
+<p>Maximum value of the range. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00061">61</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +337,9 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00020">20</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
+<p>Minimum value of the range. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/db6/Range_8h_source.html#l00059">59</a> of file <a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>.</p>
 
 </div>
 </div>

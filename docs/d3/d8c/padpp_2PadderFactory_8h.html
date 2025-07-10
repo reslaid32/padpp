@@ -88,9 +88,12 @@ $(function(){initNavTree('d3/d8c/padpp_2PadderFactory_8h.html','../../',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">PadderFactory.h File Reference</div></div>
+  <div class="headertitle"><div class="title">PadderFactory.h File Reference<div class="ingroups"><a class="el" href="../../d4/d9a/group__cppapi.html">C++ API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>C++ factory for creating IBytePadder instances by name.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;mutex&gt;</code><br />
@@ -109,13 +112,25 @@ Include dependency graph for PadderFactory.h:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:padpp_3A_3APadderFactory" id="r_padpp_3A_3APadderFactory"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc6/structpadpp_1_1PadderFactory.html">padpp::PadderFactory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton factory for named padder creation.  <a href="../../dd/dc6/structpadpp_1_1PadderFactory.html#details">More...</a><br /></td></tr>
 <tr class="memitem:padpp_3A_3APadderRegistrar" id="r_padpp_3A_3APadderRegistrar"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d17/structpadpp_1_1PadderRegistrar.html">padpp::PadderRegistrar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to register padders with <a class="el" href="../../dd/dc6/structpadpp_1_1PadderFactory.html" title="Singleton factory for named padder creation.">PadderFactory</a> at static init.  <a href="../../d8/d17/structpadpp_1_1PadderRegistrar.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:padpp" id="r_padpp"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de6/namespacepadpp.html">padpp</a></td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>C++ factory for creating IBytePadder instances by name. </p>
+<p>This header defines the <span class="tt">PadderFactory</span> singleton used to register and instantiate padder implementations by string identifiers (e.g. <span class="tt">"pkcs7"</span>, <span class="tt">"iso9797_m2"</span>).</p>
+<p>The factory is thread-safe and supports dynamic extension.</p>
+<p>To register a padder, use <span class="tt">PadderRegistrar</span>: </p><div class="fragment"><div class="line"><span class="keyword">static</span> <a class="code hl_struct" href="../../d8/d17/structpadpp_1_1PadderRegistrar.html">padpp::PadderRegistrar</a> reg(<span class="stringliteral">&quot;pkcs7&quot;</span>, [] {</div>
+<div class="line">  <span class="keywordflow">return</span> std::make_unique&lt;padpp::Pkcs7BytePadder&gt;();</div>
+<div class="line">});</div>
+<div class="ttc" id="astructpadpp_1_1PadderRegistrar_html"><div class="ttname"><a href="../../d8/d17/structpadpp_1_1PadderRegistrar.html">padpp::PadderRegistrar</a></div><div class="ttdoc">Helper to register padders with PadderFactory at static init.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d8c/padpp_2PadderFactory_8h_source.html#l00095">PadderFactory.h:96</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition in file <a class="el" href="../../d3/d8c/padpp_2PadderFactory_8h_source.html">PadderFactory.h</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

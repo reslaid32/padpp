@@ -88,9 +88,12 @@ $(function(){initNavTree('d8/dfb/structpadpp_1_1invalid__value.html','../../','d
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">padpp::invalid_value&lt; T &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">padpp::invalid_value&lt; T &gt; Struct Template Reference<div class="ingroups"><a class="el" href="../../d4/d9a/group__cppapi.html">C++ API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Exception thrown for invalid input values.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -107,18 +110,31 @@ Collaboration diagram for padpp::invalid_value&lt; T &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad880fe844693de2e09f16d04fafcc5eb" id="r_ad880fe844693de2e09f16d04fafcc5eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad880fe844693de2e09f16d04fafcc5eb">invalid_value</a> (std::string_view msg)</td></tr>
+<tr class="memdesc:ad880fe844693de2e09f16d04fafcc5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs exception with a custom message.  <br /></td></tr>
 <tr class="memitem:a5c013782f43ea9d3bb8c2dd020c4310f" id="r_a5c013782f43ea9d3bb8c2dd020c4310f"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:a5c013782f43ea9d3bb8c2dd020c4310f template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c013782f43ea9d3bb8c2dd020c4310f">invalid_value</a> (U &amp;&amp;v)</td></tr>
+<tr class="memdesc:a5c013782f43ea9d3bb8c2dd020c4310f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs exception with the invalid value. Message format: "invalid_value{value}".  <br /></td></tr>
 <tr class="memitem:ac4de74c01737f6e8558bbb78719bb214" id="r_ac4de74c01737f6e8558bbb78719bb214"><td class="memTemplParams" colspan="2">template&lt;typename U, typename V&gt; </td></tr>
-<tr class="memitem:ac4de74c01737f6e8558bbb78719bb214 template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4de74c01737f6e8558bbb78719bb214">invalid_value</a> (U &amp;&amp;v, V &amp;&amp;expected, <a class="el" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411">ExpectationHint</a> ehint=<a class="el" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">ExpectationHint::Eq</a>)</td></tr>
+<tr class="memitem:ac4de74c01737f6e8558bbb78719bb214 template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4de74c01737f6e8558bbb78719bb214">invalid_value</a> (U &amp;&amp;v, V &amp;&amp;expected, <a class="el" href="../../d4/d9a/group__cppapi.html#gad6339f419e1b3fe38b094759fd23d411">ExpectationHint</a> ehint=<a class="el" href="../../d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">ExpectationHint::Eq</a>)</td></tr>
+<tr class="memdesc:ac4de74c01737f6e8558bbb78719bb214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs exception with the invalid value, expected value, and expectation hint. Message format: "invalid_value{value} must be eq expected" or "invalid_value{value} must be ne expected".  <br /></td></tr>
 <tr class="memitem:a0a0b99be447c5eb46f9a48a10e357a16" id="r_a0a0b99be447c5eb46f9a48a10e357a16"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:a0a0b99be447c5eb46f9a48a10e357a16 template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a0b99be447c5eb46f9a48a10e357a16">invalid_value</a> (U &amp;&amp;v, <a class="el" href="../../d8/df6/structpadpp_1_1Range.html">Range</a>&lt; T &gt; range)</td></tr>
+<tr class="memdesc:a0a0b99be447c5eb46f9a48a10e357a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs exception with the invalid value and valid range. Message format: "invalid_value{value} must be in [min, max]".  <br /></td></tr>
 <tr class="memitem:a0799a9483eaed5f555cb277d0d8fe325" id="r_a0799a9483eaed5f555cb277d0d8fe325"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0799a9483eaed5f555cb277d0d8fe325">what</a> () const noexcept</td></tr>
+<tr class="memdesc:a0799a9483eaed5f555cb277d0d8fe325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the exception message.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T = std::size_t&gt;<br />
-struct padpp::invalid_value&lt; T &gt;</div>
-<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00033">33</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
+struct padpp::invalid_value&lt; T &gt;</div><p>Exception thrown for invalid input values. </p>
+<p>Provides detailed error messages including the invalid value, expected value or range, and expectation hint.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type used for range checking (default is std::size_t). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00065">65</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad880fe844693de2e09f16d04fafcc5eb" name="ad880fe844693de2e09f16d04fafcc5eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad880fe844693de2e09f16d04fafcc5eb">&#9670;&#160;</a></span>invalid_value() <span class="overload">[1/4]</span></h2>
@@ -145,9 +161,17 @@ template&lt;typename T = std::size_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00039">39</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>: str(<a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">msg</a>) {}</div>
-<div class="ttc" id="astructpadpp_1_1invalid__value_html"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html">padpp::invalid_value</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d7c/Exceptions_8h_source.html#l00033">Exceptions.h:34</a></div></div>
+<p>Constructs exception with a custom message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Message describing the error. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00076">76</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>: str(<a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">msg</a>) {}</div>
+<div class="ttc" id="astructpadpp_1_1invalid__value_html"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html">padpp::invalid_value</a></div><div class="ttdoc">Exception thrown for invalid input values.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7c/Exceptions_8h_source.html#l00065">Exceptions.h:66</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -178,13 +202,27 @@ template&lt;typename U&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00041">41</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>  {</div>
-<div class="line"><span class="lineno">   43</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">std::ostringstream</a> <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>;</div>
-<div class="line"><span class="lineno">   44</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a> &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span></div>
-<div class="line"><span class="lineno">   45</span>        &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">v</a> &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><span class="lineno">   46</span>    str = <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>.str();</div>
-<div class="line"><span class="lineno">   47</span>  }</div>
+<p>Constructs exception with the invalid value. Message format: "invalid_value{value}". </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Type of the invalid value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>The invalid value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00085">85</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>  {</div>
+<div class="line"><span class="lineno">   87</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">std::ostringstream</a> <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>;</div>
+<div class="line"><span class="lineno">   88</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a> &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span></div>
+<div class="line"><span class="lineno">   89</span>        &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">v</a> &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><span class="lineno">   90</span>    str = <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>.str();</div>
+<div class="line"><span class="lineno">   91</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -214,7 +252,7 @@ template&lt;typename U, typename V&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411">ExpectationHint</a></td>          <td class="paramname"><span class="paramname"><em>ehint</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">ExpectationHint::Eq</a></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d4/d9a/group__cppapi.html#gad6339f419e1b3fe38b094759fd23d411">ExpectationHint</a></td>          <td class="paramname"><span class="paramname"><em>ehint</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">ExpectationHint::Eq</a></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -224,14 +262,31 @@ template&lt;typename U, typename V&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00050">50</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>  {</div>
-<div class="line"><span class="lineno">   52</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">std::ostringstream</a> <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>;</div>
-<div class="line"><span class="lineno">   53</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a> &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span> &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">v</a> &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; <span class="stringliteral">&quot;must be &quot;</span> &lt;&lt; <a class="code hl_function" href="../../dc/de6/namespacepadpp.html#aeaf4614e8c408a2f1967810f9e8b349a">to_string</a>(<a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">ehint</a>)</div>
-<div class="line"><span class="lineno">   54</span>        &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">expected</a>;</div>
-<div class="line"><span class="lineno">   55</span>    str = <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>.str();</div>
-<div class="line"><span class="lineno">   56</span>  }</div>
-<div class="ttc" id="anamespacepadpp_html_aeaf4614e8c408a2f1967810f9e8b349a"><div class="ttname"><a href="../../dc/de6/namespacepadpp.html#aeaf4614e8c408a2f1967810f9e8b349a">padpp::to_string</a></div><div class="ttdeci">const char * to_string(ExpectationHint ehint)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7c/Exceptions_8h_source.html#l00020">Exceptions.h:20</a></div></div>
+<p>Constructs exception with the invalid value, expected value, and expectation hint. Message format: "invalid_value{value} must be eq expected" or "invalid_value{value} must be ne expected". </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Type of the invalid value. </td></tr>
+    <tr><td class="paramname">V</td><td>Type of the expected value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>Actual invalid value. </td></tr>
+    <tr><td class="paramname">expected</td><td>Expected value. </td></tr>
+    <tr><td class="paramname">ehint</td><td>Expectation hint (default is Eq). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00106">106</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>  {</div>
+<div class="line"><span class="lineno">  108</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">std::ostringstream</a> <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>;</div>
+<div class="line"><span class="lineno">  109</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a> &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span> &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">v</a> &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; <span class="stringliteral">&quot; must be &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d4/d9a/group__cppapi.html#gaeaf4614e8c408a2f1967810f9e8b349a">to_string</a>(<a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">ehint</a>)</div>
+<div class="line"><span class="lineno">  110</span>        &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">expected</a>;</div>
+<div class="line"><span class="lineno">  111</span>    str = <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>.str();</div>
+<div class="line"><span class="lineno">  112</span>  }</div>
+<div class="ttc" id="agroup__cppapi_html_gaeaf4614e8c408a2f1967810f9e8b349a"><div class="ttname"><a href="../../d4/d9a/group__cppapi.html#gaeaf4614e8c408a2f1967810f9e8b349a">padpp::to_string</a></div><div class="ttdeci">const char * to_string(ExpectationHint ehint)</div><div class="ttdoc">Converts an ExpectationHint to its string representation.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7c/Exceptions_8h_source.html#l00043">Exceptions.h:43</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -266,12 +321,27 @@ template&lt;typename U&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00058">58</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>  {</div>
-<div class="line"><span class="lineno">   60</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">std::ostringstream</a> <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>;</div>
-<div class="line"><span class="lineno">   61</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a> &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span> &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">v</a> &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; <span class="stringliteral">&quot; must be in &quot;</span> &lt;&lt; <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">range</a>;</div>
-<div class="line"><span class="lineno">   62</span>    str = <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>.str();</div>
-<div class="line"><span class="lineno">   63</span>  }</div>
+<p>Constructs exception with the invalid value and valid range. Message format: "invalid_value{value} must be in [min, max]". </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Type of the invalid value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>Invalid value. </td></tr>
+    <tr><td class="paramname">range</td><td>Valid range of values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00122">122</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>  {</div>
+<div class="line"><span class="lineno">  124</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">std::ostringstream</a> <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>;</div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a> &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span> &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">v</a> &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; <span class="stringliteral">&quot; must be in &quot;</span> &lt;&lt; <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">range</a>;</div>
+<div class="line"><span class="lineno">  126</span>    str = <a class="code hl_struct" href="../../d8/dfb/structpadpp_1_1invalid__value.html">oss</a>.str();</div>
+<div class="line"><span class="lineno">  127</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -301,10 +371,13 @@ template&lt;typename T = std::size_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00066">66</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>  {</div>
-<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">return</span> str.c_str();</div>
-<div class="line"><span class="lineno">   69</span>  }</div>
+<p>Returns the exception message. </p>
+<dl class="section return"><dt>Returns</dt><dd>C-string containing the message. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7c/Exceptions_8h_source.html#l00134">134</a> of file <a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>  {</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">return</span> str.c_str();</div>
+<div class="line"><span class="lineno">  137</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -126,7 +126,7 @@ Functions</h2></td></tr>
 <div class="textblock"><p>C API for ISO/IEC 9797-1 Padding Method 1 (M1) padder in padpp. </p>
 <p>This header defines a C interface for the ISO9797 Method 1 padder. This method supports <b>only one-way padding</b> and may not support unpadding reliably.</p>
 <p>Can also be constructed via the generic PadderFactory using the name <span class="tt">"iso9797_m1"</span>.</p>
-<dl class="section note"><dt>Note</dt><dd>This implementation is marked as <b>NOT UNIT TEST READY</b>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This implementation is <b>one-way padding only</b>, and is <b>not unit test ready</b>. The <span class="tt">unpad()</span> method is currently a placeholder and may not work correctly. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../dd/d27/padpp-c_2ISO9797__M1__BytePadder_8h_source.html">ISO9797_M1_BytePadder.h</a>.</p>
 </div></div><!-- contents -->

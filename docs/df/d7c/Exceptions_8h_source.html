@@ -91,104 +91,107 @@ $(function(){initNavTree('df/d7c/Exceptions_8h_source.html','../../',''); });
   <div class="headertitle"><div class="title">Exceptions.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../df/d7c/Exceptions_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;exception&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../d9/db6/Range_8h.html">Range.h</a>&quot;</span></div>
+<a href="../../df/d7c/Exceptions_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/de6/namespacepadpp.html">padpp</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411">   13</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411">ExpectationHint</a></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">   15</a></span>  <a class="code hl_enumvalue" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">Eq</a> = 0,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498">   16</a></span>  <a class="code hl_enumvalue" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498">Ne</a> = 1</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
-</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;exception&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="../../d9/db6/Range_8h.html">Range.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../dc/de6/namespacepadpp.html#aeaf4614e8c408a2f1967810f9e8b349a">   20</a></span><a class="code hl_function" href="../../dc/de6/namespacepadpp.html#aeaf4614e8c408a2f1967810f9e8b349a">to_string</a>(<a class="code hl_enumeration" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411">ExpectationHint</a> ehint)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keywordflow">switch</span> (ehint)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">ExpectationHint::Eq</a>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;eq&quot;</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498">ExpectationHint::Ne</a>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;ne&quot;</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;unknown&quot;</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/de6/namespacepadpp.html">padpp</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d4/d9a/group__cppapi.html#gad6339f419e1b3fe38b094759fd23d411">   26</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="../../d4/d9a/group__cppapi.html#gad6339f419e1b3fe38b094759fd23d411">ExpectationHint</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">   29</a></span>  <a class="code hl_enumvalue" href="../../d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">Eq</a> = 0,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498">   32</a></span>  <a class="code hl_enumvalue" href="../../d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498">Ne</a> = 1</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
 </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html">   33</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = std::<span class="keywordtype">size_t</span>&gt; <span class="keyword">struct </span><a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#ad880fe844693de2e09f16d04fafcc5eb">invalid_value</a> : <span class="keyword">public</span> std::exception</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  std::string str;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html#ad880fe844693de2e09f16d04fafcc5eb">   39</a></span>  <a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#ad880fe844693de2e09f16d04fafcc5eb">invalid_value</a>(std::string_view msg) : str(msg) {}</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a5c013782f43ea9d3bb8c2dd020c4310f">   41</a></span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt; <a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a5c013782f43ea9d3bb8c2dd020c4310f">invalid_value</a>(U&amp;&amp; v)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    std::ostringstream oss;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    oss &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; v &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    str = oss.str();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d4/d9a/group__cppapi.html#gaeaf4614e8c408a2f1967810f9e8b349a">   43</a></span><a class="code hl_function" href="../../d4/d9a/group__cppapi.html#gaeaf4614e8c408a2f1967810f9e8b349a">to_string</a>(<a class="code hl_enumeration" href="../../d4/d9a/group__cppapi.html#gad6339f419e1b3fe38b094759fd23d411">ExpectationHint</a> ehint)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">switch</span> (ehint)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">ExpectationHint::Eq</a>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;eq&quot;</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498">ExpectationHint::Ne</a>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;ne&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;unknown&quot;</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
 </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U, <span class="keyword">typename</span> V&gt;</div>
-<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html#ac4de74c01737f6e8558bbb78719bb214">   50</a></span>  <a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#ac4de74c01737f6e8558bbb78719bb214">invalid_value</a>(U&amp;&amp; v, V&amp;&amp; expected, <a class="code hl_enumeration" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411">ExpectationHint</a> ehint = <a class="code hl_enumvalue" href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">ExpectationHint::Eq</a>)</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::ostringstream oss;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    oss &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span> &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; v &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; <span class="stringliteral">&quot;must be &quot;</span> &lt;&lt; <a class="code hl_function" href="../../dc/de6/namespacepadpp.html#aeaf4614e8c408a2f1967810f9e8b349a">to_string</a>(ehint)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; expected;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    str = oss.str();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="};">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html">   65</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = std::<span class="keywordtype">size_t</span>&gt; <span class="keyword">struct </span><a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#ad880fe844693de2e09f16d04fafcc5eb">invalid_value</a> : <span class="keyword">public</span> std::exception</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  std::string str;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html#ad880fe844693de2e09f16d04fafcc5eb">   76</a></span>  <a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#ad880fe844693de2e09f16d04fafcc5eb">invalid_value</a>(std::string_view msg) : str(msg) {}</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a5c013782f43ea9d3bb8c2dd020c4310f">   85</a></span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt; <a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a5c013782f43ea9d3bb8c2dd020c4310f">invalid_value</a>(U&amp;&amp; v)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    std::ostringstream oss;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    oss &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; v &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    str = oss.str();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  }</div>
 </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0a0b99be447c5eb46f9a48a10e357a16">   58</a></span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt; <a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0a0b99be447c5eb46f9a48a10e357a16">invalid_value</a>(U&amp;&amp; v, <a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">Range&lt;T&gt;</a> range)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::ostringstream oss;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    oss &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span> &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; v &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; <span class="stringliteral">&quot; must be in &quot;</span> &lt;&lt; range;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    str = oss.str();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U, <span class="keyword">typename</span> V&gt;</div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html#ac4de74c01737f6e8558bbb78719bb214">  106</a></span>  <a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#ac4de74c01737f6e8558bbb78719bb214">invalid_value</a>(U&amp;&amp; v, V&amp;&amp; expected, <a class="code hl_enumeration" href="../../d4/d9a/group__cppapi.html#gad6339f419e1b3fe38b094759fd23d411">ExpectationHint</a> ehint = <a class="code hl_enumvalue" href="../../d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">ExpectationHint::Eq</a>)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    std::ostringstream oss;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    oss &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span> &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; v &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; <span class="stringliteral">&quot; must be &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d4/d9a/group__cppapi.html#gaeaf4614e8c408a2f1967810f9e8b349a">to_string</a>(ehint)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; expected;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    str = oss.str();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  }</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0799a9483eaed5f555cb277d0d8fe325">   66</a></span>  <a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0799a9483eaed5f555cb277d0d8fe325">what</a>() const noexcept</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> str.c_str();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span></div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0a0b99be447c5eb46f9a48a10e357a16">  122</a></span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt; <a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0a0b99be447c5eb46f9a48a10e357a16">invalid_value</a>(U&amp;&amp; v, <a class="code hl_struct" href="../../d8/df6/structpadpp_1_1Range.html">Range&lt;T&gt;</a> range)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    std::ostringstream oss;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    oss &lt;&lt; <span class="stringliteral">&quot;invalid_value&quot;</span> &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; v &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; <span class="stringliteral">&quot; must be in &quot;</span> &lt;&lt; range;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    str = oss.str();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  }</div>
 </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
+<div class="foldopen" id="foldopen00134" data-start="{" data-end="}">
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0799a9483eaed5f555cb277d0d8fe325">  134</a></span>  <a class="code hl_function" href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0799a9483eaed5f555cb277d0d8fe325">what</a>() const noexcept</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">return</span> str.c_str();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  }</div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
-<div class="ttc" id="aRange_8h_html"><div class="ttname"><a href="../../d9/db6/Range_8h.html">Range.h</a></div></div>
-<div class="ttc" id="anamespacepadpp_html"><div class="ttname"><a href="../../dc/de6/namespacepadpp.html">padpp</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d6a/padpp_2Ansi923BytePadder_8h_source.html#l00015">Ansi923BytePadder.h:16</a></div></div>
-<div class="ttc" id="anamespacepadpp_html_ad6339f419e1b3fe38b094759fd23d411"><div class="ttname"><a href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411">padpp::ExpectationHint</a></div><div class="ttdeci">ExpectationHint</div><div class="ttdef"><b>Definition</b> <a href="#l00013">Exceptions.h:14</a></div></div>
-<div class="ttc" id="anamespacepadpp_html_ad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3"><div class="ttname"><a href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">padpp::ExpectationHint::Eq</a></div><div class="ttdeci">@ Eq</div><div class="ttdef"><b>Definition</b> <a href="#l00015">Exceptions.h:15</a></div></div>
-<div class="ttc" id="anamespacepadpp_html_ad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498"><div class="ttname"><a href="../../dc/de6/namespacepadpp.html#ad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498">padpp::ExpectationHint::Ne</a></div><div class="ttdeci">@ Ne</div><div class="ttdef"><b>Definition</b> <a href="#l00016">Exceptions.h:16</a></div></div>
-<div class="ttc" id="anamespacepadpp_html_aeaf4614e8c408a2f1967810f9e8b349a"><div class="ttname"><a href="../../dc/de6/namespacepadpp.html#aeaf4614e8c408a2f1967810f9e8b349a">padpp::to_string</a></div><div class="ttdeci">const char * to_string(ExpectationHint ehint)</div><div class="ttdef"><b>Definition</b> <a href="#l00020">Exceptions.h:20</a></div></div>
-<div class="ttc" id="astructpadpp_1_1Range_html"><div class="ttname"><a href="../../d8/df6/structpadpp_1_1Range.html">padpp::Range</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/db6/Range_8h_source.html#l00010">Range.h:11</a></div></div>
-<div class="ttc" id="astructpadpp_1_1invalid__value_html_a0799a9483eaed5f555cb277d0d8fe325"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0799a9483eaed5f555cb277d0d8fe325">padpp::invalid_value::what</a></div><div class="ttdeci">const char * what() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00066">Exceptions.h:66</a></div></div>
-<div class="ttc" id="astructpadpp_1_1invalid__value_html_a0a0b99be447c5eb46f9a48a10e357a16"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0a0b99be447c5eb46f9a48a10e357a16">padpp::invalid_value::invalid_value</a></div><div class="ttdeci">invalid_value(U &amp;&amp;v, Range&lt; T &gt; range)</div><div class="ttdef"><b>Definition</b> <a href="#l00058">Exceptions.h:58</a></div></div>
-<div class="ttc" id="astructpadpp_1_1invalid__value_html_a5c013782f43ea9d3bb8c2dd020c4310f"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html#a5c013782f43ea9d3bb8c2dd020c4310f">padpp::invalid_value::invalid_value</a></div><div class="ttdeci">invalid_value(U &amp;&amp;v)</div><div class="ttdef"><b>Definition</b> <a href="#l00041">Exceptions.h:41</a></div></div>
-<div class="ttc" id="astructpadpp_1_1invalid__value_html_ac4de74c01737f6e8558bbb78719bb214"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html#ac4de74c01737f6e8558bbb78719bb214">padpp::invalid_value::invalid_value</a></div><div class="ttdeci">invalid_value(U &amp;&amp;v, V &amp;&amp;expected, ExpectationHint ehint=ExpectationHint::Eq)</div><div class="ttdef"><b>Definition</b> <a href="#l00050">Exceptions.h:50</a></div></div>
-<div class="ttc" id="astructpadpp_1_1invalid__value_html_ad880fe844693de2e09f16d04fafcc5eb"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html#ad880fe844693de2e09f16d04fafcc5eb">padpp::invalid_value::invalid_value</a></div><div class="ttdeci">invalid_value(std::string_view msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00039">Exceptions.h:39</a></div></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>};</div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>} <span class="comment">// namespace padpp</span></div>
+<div class="ttc" id="aRange_8h_html"><div class="ttname"><a href="../../d9/db6/Range_8h.html">Range.h</a></div><div class="ttdoc">Template class representing a numeric range with minimum and maximum values.</div></div>
+<div class="ttc" id="agroup__cppapi_html_gad6339f419e1b3fe38b094759fd23d411"><div class="ttname"><a href="../../d4/d9a/group__cppapi.html#gad6339f419e1b3fe38b094759fd23d411">padpp::ExpectationHint</a></div><div class="ttdeci">ExpectationHint</div><div class="ttdoc">Hint indicating the expected condition for a value.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">Exceptions.h:27</a></div></div>
+<div class="ttc" id="agroup__cppapi_html_gaeaf4614e8c408a2f1967810f9e8b349a"><div class="ttname"><a href="../../d4/d9a/group__cppapi.html#gaeaf4614e8c408a2f1967810f9e8b349a">padpp::to_string</a></div><div class="ttdeci">const char * to_string(ExpectationHint ehint)</div><div class="ttdoc">Converts an ExpectationHint to its string representation.</div><div class="ttdef"><b>Definition</b> <a href="#l00043">Exceptions.h:43</a></div></div>
+<div class="ttc" id="agroup__cppapi_html_ggad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3"><div class="ttname"><a href="../../d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a3718b5ecf60aa0dba49e150e96cb1fc3">padpp::ExpectationHint::Eq</a></div><div class="ttdeci">@ Eq</div><div class="ttdoc">Expect equal.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">Exceptions.h:29</a></div></div>
+<div class="ttc" id="agroup__cppapi_html_ggad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498"><div class="ttname"><a href="../../d4/d9a/group__cppapi.html#ggad6339f419e1b3fe38b094759fd23d411a4dec99baa99738721da9c9b0c1a92498">padpp::ExpectationHint::Ne</a></div><div class="ttdeci">@ Ne</div><div class="ttdoc">Expect not equal.</div><div class="ttdef"><b>Definition</b> <a href="#l00032">Exceptions.h:32</a></div></div>
+<div class="ttc" id="anamespacepadpp_html"><div class="ttname"><a href="../../dc/de6/namespacepadpp.html">padpp</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d6a/padpp_2Ansi923BytePadder_8h_source.html#l00018">Ansi923BytePadder.h:19</a></div></div>
+<div class="ttc" id="astructpadpp_1_1Range_html"><div class="ttname"><a href="../../d8/df6/structpadpp_1_1Range.html">padpp::Range</a></div><div class="ttdoc">Represents a range of values from min to max inclusive.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db6/Range_8h_source.html#l00036">Range.h:37</a></div></div>
+<div class="ttc" id="astructpadpp_1_1invalid__value_html_a0799a9483eaed5f555cb277d0d8fe325"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0799a9483eaed5f555cb277d0d8fe325">padpp::invalid_value::what</a></div><div class="ttdeci">const char * what() const noexcept</div><div class="ttdoc">Returns the exception message.</div><div class="ttdef"><b>Definition</b> <a href="#l00134">Exceptions.h:134</a></div></div>
+<div class="ttc" id="astructpadpp_1_1invalid__value_html_a0a0b99be447c5eb46f9a48a10e357a16"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html#a0a0b99be447c5eb46f9a48a10e357a16">padpp::invalid_value::invalid_value</a></div><div class="ttdeci">invalid_value(U &amp;&amp;v, Range&lt; T &gt; range)</div><div class="ttdoc">Constructs exception with the invalid value and valid range. Message format: &quot;invalid_value{value}...</div><div class="ttdef"><b>Definition</b> <a href="#l00122">Exceptions.h:122</a></div></div>
+<div class="ttc" id="astructpadpp_1_1invalid__value_html_a5c013782f43ea9d3bb8c2dd020c4310f"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html#a5c013782f43ea9d3bb8c2dd020c4310f">padpp::invalid_value::invalid_value</a></div><div class="ttdeci">invalid_value(U &amp;&amp;v)</div><div class="ttdoc">Constructs exception with the invalid value. Message format: &quot;invalid_value{value}...</div><div class="ttdef"><b>Definition</b> <a href="#l00085">Exceptions.h:85</a></div></div>
+<div class="ttc" id="astructpadpp_1_1invalid__value_html_ac4de74c01737f6e8558bbb78719bb214"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html#ac4de74c01737f6e8558bbb78719bb214">padpp::invalid_value::invalid_value</a></div><div class="ttdeci">invalid_value(U &amp;&amp;v, V &amp;&amp;expected, ExpectationHint ehint=ExpectationHint::Eq)</div><div class="ttdoc">Constructs exception with the invalid value, expected value, and expectation hint....</div><div class="ttdef"><b>Definition</b> <a href="#l00106">Exceptions.h:106</a></div></div>
+<div class="ttc" id="astructpadpp_1_1invalid__value_html_ad880fe844693de2e09f16d04fafcc5eb"><div class="ttname"><a href="../../d8/dfb/structpadpp_1_1invalid__value.html#ad880fe844693de2e09f16d04fafcc5eb">padpp::invalid_value::invalid_value</a></div><div class="ttdeci">invalid_value(std::string_view msg)</div><div class="ttdoc">Constructs exception with a custom message.</div><div class="ttdef"><b>Definition</b> <a href="#l00076">Exceptions.h:76</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

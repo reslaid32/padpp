@@ -88,9 +88,12 @@ $(function(){initNavTree('d0/d0b/IBytePadder_8h.html','../../',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">IBytePadder.h File Reference</div></div>
+  <div class="headertitle"><div class="title">IBytePadder.h File Reference<div class="ingroups"><a class="el" href="../../d4/d9a/group__cppapi.html">C++ API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interface for all byte-oriented padding strategies in padpp.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;span&gt;</code><br />
@@ -111,12 +114,24 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:padpp_3A_3AIBytePadder" id="r_padpp_3A_3AIBytePadder"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de7/structpadpp_1_1IBytePadder.html">padpp::IBytePadder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class for byte-level padder algorithms.  <a href="../../d6/de7/structpadpp_1_1IBytePadder.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:padpp" id="r_padpp"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de6/namespacepadpp.html">padpp</a></td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface for all byte-oriented padding strategies in padpp. </p>
+<p>This interface defines the core contract for any block padding algorithm. Implementations should inherit from this and implement <span class="tt">pad()</span> and <span class="tt">unpad()</span>.</p>
+<p>Common derived implementations:</p><ul>
+<li>Ansi923BytePadder</li>
+<li>Pkcs7BytePadder</li>
+<li>ISO9797_M1_BytePadder</li>
+<li>ISO9797_M2_BytePadder </li>
+</ul>
+
+<p class="definition">Definition in file <a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

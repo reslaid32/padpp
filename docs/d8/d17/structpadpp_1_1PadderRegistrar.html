@@ -88,19 +88,28 @@ $(function(){initNavTree('d8/d17/structpadpp_1_1PadderRegistrar.html','../../','
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">padpp::PadderRegistrar Struct Reference</div></div>
+  <div class="headertitle"><div class="title">padpp::PadderRegistrar Struct Reference<div class="ingroups"><a class="el" href="../../d4/d9a/group__cppapi.html">C++ API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Helper to register padders with <a class="el" href="../../dd/dc6/structpadpp_1_1PadderFactory.html" title="Singleton factory for named padder creation.">PadderFactory</a> at static init.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d3/d8c/padpp_2PadderFactory_8h_source.html">PadderFactory.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a21f41e97cca83bd5cee022092121511e" id="r_a21f41e97cca83bd5cee022092121511e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21f41e97cca83bd5cee022092121511e">PadderRegistrar</a> (const std::string &amp;name, <a class="el" href="../../dd/dc6/structpadpp_1_1PadderFactory.html#ae7b9a66f0b9241f8439627517f1fded0">PadderFactory::Creator</a> creator)</td></tr>
+<tr class="memdesc:a21f41e97cca83bd5cee022092121511e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a padder with the factory at construction.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d3/d8c/padpp_2PadderFactory_8h_source.html#l00035">35</a> of file <a class="el" href="../../d3/d8c/padpp_2PadderFactory_8h_source.html">PadderFactory.h</a>.</p>
+<div class="textblock"><p>Helper to register padders with <a class="el" href="../../dd/dc6/structpadpp_1_1PadderFactory.html" title="Singleton factory for named padder creation.">PadderFactory</a> at static init. </p>
+<p>Use this type in a static context to auto-register a padder: </p><div class="fragment"><div class="line"><span class="keyword">static</span> <a class="code hl_struct" href="../../d8/d17/structpadpp_1_1PadderRegistrar.html">padpp::PadderRegistrar</a> reg(<span class="stringliteral">&quot;ansi923&quot;</span>, [] {</div>
+<div class="line">  <span class="keywordflow">return</span> std::make_unique&lt;padpp::Ansi923BytePadder&gt;();</div>
+<div class="line">});</div>
+<div class="ttc" id="astructpadpp_1_1PadderRegistrar_html"><div class="ttname"><a href="../../d8/d17/structpadpp_1_1PadderRegistrar.html">padpp::PadderRegistrar</a></div><div class="ttdoc">Helper to register padders with PadderFactory at static init.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d8c/padpp_2PadderFactory_8h_source.html#l00095">PadderFactory.h:96</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="../../d3/d8c/padpp_2PadderFactory_8h_source.html#l00095">95</a> of file <a class="el" href="../../d3/d8c/padpp_2PadderFactory_8h_source.html">PadderFactory.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a21f41e97cca83bd5cee022092121511e" name="a21f41e97cca83bd5cee022092121511e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a21f41e97cca83bd5cee022092121511e">&#9670;&#160;</a></span>PadderRegistrar()</h2>
@@ -120,6 +129,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Registers a padder with the factory at construction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name to register under. </td></tr>
+    <tr><td class="paramname">creator</td><td>Function to create a new padder instance. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

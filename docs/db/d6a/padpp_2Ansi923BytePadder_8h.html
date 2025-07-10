@@ -88,12 +88,13 @@ $(function(){initNavTree('db/d6a/padpp_2Ansi923BytePadder_8h.html','../../','');
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Ansi923BytePadder.h File Reference</div></div>
+  <div class="headertitle"><div class="title">Ansi923BytePadder.h File Reference<div class="ingroups"><a class="el" href="../../d4/d9a/group__cppapi.html">C++ API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../df/d7c/Exceptions_8h_source.html">Exceptions.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d9/db6/Range_8h_source.html">Range.h</a>&quot;</code><br />
+
+<p>C++ implementation of the ANSI X9.23 padding algorithm.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d0/d0b/IBytePadder_8h_source.html">IBytePadder.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/d3d/padpp_2Support_8h_source.html">Support.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Ansi923BytePadder.h:</div>
@@ -111,12 +112,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:padpp_3A_3AAnsi923BytePadder" id="r_padpp_3A_3AAnsi923BytePadder"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4e/structpadpp_1_1Ansi923BytePadder.html">padpp::Ansi923BytePadder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ padder for ANSI X9.23.  <a href="../../dc/d4e/structpadpp_1_1Ansi923BytePadder.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:padpp" id="r_padpp"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de6/namespacepadpp.html">padpp</a></td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>C++ implementation of the ANSI X9.23 padding algorithm. </p>
+<p>This class implements the byte-level ANSI X9.23 padding and unpadding logic. It is registered under the PadderFactory with name <span class="tt">"ansi923"</span>.</p>
+<p>The algorithm adds padding bytes followed by a single length byte at the end, conforming to ANSI X9.23 standard. </p>
+
+<p class="definition">Definition in file <a class="el" href="../../db/d6a/padpp_2Ansi923BytePadder_8h_source.html">Ansi923BytePadder.h</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

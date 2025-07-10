@@ -8,7 +8,8 @@
  *
  * Can also be constructed via the generic PadderFactory using the name `"iso9797_m1"`.
  *
- * @note This implementation is marked as **NOT UNIT TEST READY**.
+ * @note This implementation is **one-way padding only**, and is **not unit test ready**.
+ *       The `unpad()` method is currently a placeholder and may not work correctly.
  */
 
 #ifndef PADPPC_ISO9797_M1_BYTE_PADDER_C_H
