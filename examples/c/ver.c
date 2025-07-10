@@ -1,5 +1,5 @@
 
-#include <padpp-c/VersionController.h>
+#include <padpp-c/Version.h>
 #include <stdio.h>
 
 int

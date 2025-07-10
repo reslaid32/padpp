@@ -2,10 +2,10 @@
 
 #include "../include/padpp-c/Support.h"
 
-#include "../include/padpp-c/VersionController.h"
-#include "../include/padpp/VersionController.h"
+#include "../include/padpp-c/Version.h"
+#include "../include/padpp/Version.h"
 
-static padpp::Version _version = { 0, 1, 1 };
+static padpp::Version _version = { 0, 1, 2 };
 
 padpp::Version&
 padpp::Version::current()
