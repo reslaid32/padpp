@@ -19,13 +19,13 @@
 #include "./Support.h"
 #include "./Type.h"
 
+_PADPP_EXTERN_C_BEGIN
+
 /**
  * @defgroup capi C API
  * @brief Public C interface for the padpp library.
  * @{
  */
-
-_PADPP_EXTERN_C _PADPP_CXX_only({)
 
 /**
  * @brief Creates a new padder instance by name.
@@ -35,46 +35,44 @@ _PADPP_EXTERN_C _PADPP_CXX_only({)
  */
 _PADPP_PUBLIC padpp_handle_t padpp_create(const char* name);
 
-  /**
-   * @brief Destroys a padder instance.
-   *
-   * @param padder The padder handle to destroy.
-   */
-  _PADPP_PUBLIC void padpp_destroy(padpp_handle_t padder);
+/**
+ * @brief Destroys a padder instance.
+ *
+ * @param padder The padder handle to destroy.
+ */
+_PADPP_PUBLIC void padpp_destroy(padpp_handle_t padder);
 
-  /**
-   * @brief Applies padding using the selected padder.
-   *
-   * @param padder      The padder context.
-   * @param dst         Output buffer (must be large enough).
-   * @param dst_len     Input: max length of `dst`, Output: actual padded length.
-   * @param src         Input buffer with raw data.
-   * @param src_len     Length of input buffer.
-   * @param block_size  Block size for padding.
-   * @return 0 on success, non-zero on error (e.g. invalid input or buffer too small).
-   */
-  _PADPP_PUBLIC int padpp_pad(padpp_handle_t padder, uint8_t* dst,
+/**
+ * @brief Applies padding using the selected padder.
+ *
+ * @param padder      The padder context.
+ * @param dst         Output buffer (must be large enough).
+ * @param dst_len     Input: max length of `dst`, Output: actual padded length.
+ * @param src         Input buffer with raw data.
+ * @param src_len     Length of input buffer.
+ * @param block_size  Block size for padding.
+ * @return 0 on success, non-zero on error (e.g. invalid input or buffer too small).
+ */
+_PADPP_PUBLIC int padpp_pad(padpp_handle_t padder, uint8_t* dst, size_t* dst_len,
+                            const uint8_t* src, size_t src_len, size_t block_size);
+
+/**
+ * @brief Removes padding from a previously padded buffer.
+ *
+ * @param padder      The padder context.
+ * @param dst         Output buffer for unpadded data.
+ * @param dst_len     Input: max length of `dst`, Output: actual unpadded length.
+ * @param src         Input buffer with padded data.
+ * @param src_len     Length of input buffer.
+ * @param block_size  Block size used during padding.
+ * @return 0 on success, non-zero on error (e.g. invalid padding).
+ */
+_PADPP_PUBLIC int padpp_unpad(padpp_handle_t padder, uint8_t* dst,
                               size_t* dst_len, const uint8_t* src,
                               size_t src_len, size_t block_size);
 
-  /**
-   * @brief Removes padding from a previously padded buffer.
-   *
-   * @param padder      The padder context.
-   * @param dst         Output buffer for unpadded data.
-   * @param dst_len     Input: max length of `dst`, Output: actual unpadded length.
-   * @param src         Input buffer with padded data.
-   * @param src_len     Length of input buffer.
-   * @param block_size  Block size used during padding.
-   * @return 0 on success, non-zero on error (e.g. invalid padding).
-   */
-  _PADPP_PUBLIC int padpp_unpad(padpp_handle_t padder, uint8_t* dst,
-                                size_t* dst_len, const uint8_t* src,
-                                size_t src_len, size_t block_size);
+/** @} */
 
-_PADPP_CXX_only(
-})
-
-/** @} */ // end of capi
+_PADPP_EXTERN_C_END
 
 #endif // PADPPC_PADDER_FACTORY_C_H

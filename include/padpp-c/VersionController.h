@@ -12,6 +12,8 @@
 
 #include "./Support.h"
 
+_PADPP_EXTERN_C_BEGIN
+
 /**
  * @defgroup capi C API
  * @brief Public C interface for the padpp library.
@@ -42,19 +44,16 @@ struct padpp_Version
  */
 typedef struct padpp_Version padpp_version_t;
 
-_PADPP_EXTERN_C _PADPP_CXX_only({)
+/**
+ * @ingroup capi
+ * @brief Returns the current version of the padpp library.
+ *
+ * @return A `padpp_version_t` structure containing the version information.
+ */
+_PADPP_PUBLIC padpp_version_t padpp_Version_current(void);
 
-  /**
-  * @ingroup capi
-  * @brief Returns the current version of the padpp library.
-  *
-  * @return A `padpp_version_t` structure containing the version information.
-  */
-  _PADPP_PUBLIC padpp_version_t padpp_Version_current(void);
+/** @} */
 
-_PADPP_CXX_only(
-})
-
-/** @} */ // end of capi
+_PADPP_EXTERN_C_END
 
 #endif // PADPPC_VERSION_CONTROLLER_C_H
