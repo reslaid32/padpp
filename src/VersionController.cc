@@ -5,7 +5,7 @@
 #include "../include/padpp-c/VersionController.h"
 #include "../include/padpp/VersionController.h"
 
-static padpp::Version _version = { 0, 1, 0 };
+static padpp::Version _version = { 0, 1, 1 };
 
 padpp::Version&
 padpp::Version::current()
