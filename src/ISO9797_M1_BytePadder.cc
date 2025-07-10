@@ -6,6 +6,9 @@
 #include "../include/padpp/ISO9797_M1_BytePadder.h"
 #include "../include/padpp/PadderFactory.h"
 
+#include "../include/padpp/Exceptions.h"
+#include "../include/padpp/Range.h"
+
 namespace padpp
 {
 
