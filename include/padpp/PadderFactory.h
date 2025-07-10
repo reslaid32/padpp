@@ -7,11 +7,12 @@
 #include <unordered_map>
 
 #include "IBytePadder.h"
+#include "Support.h"
 
 namespace padpp
 {
 
-struct PadderFactory
+struct _PADPP_PUBLIC PadderFactory
 {
   using Creator = std::function<std::unique_ptr<IBytePadder>()>;
 
@@ -31,7 +32,7 @@ private:
   std::unordered_map<std::string, Creator> creators_;
 };
 
-struct PadderRegistrar
+struct _PADPP_EXPORT PadderRegistrar
 {
   PadderRegistrar(const std::string& name, PadderFactory::Creator creator);
 };

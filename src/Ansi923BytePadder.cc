@@ -1,5 +1,9 @@
-#include "../include/padpp/Ansi923BytePadder.h"
+#define _PADPP_BUILDING
+
+#include "../include/padpp-c/Support.h"
+
 #include "../include/padpp-c/Ansi923BytePadder.h"
+#include "../include/padpp/Ansi923BytePadder.h"
 #include "../include/padpp/PadderFactory.h"
 
 namespace padpp
@@ -123,7 +127,7 @@ using namespace padpp;
 
 extern "C"
 {
-  padpp_ansi923_padder_t
+  _PADPP_PUBLIC padpp_ansi923_padder_t
   padpp_ansi923_create()
   {
     try
@@ -136,13 +140,13 @@ extern "C"
     }
   }
 
-  void
+  _PADPP_PUBLIC void
   padpp_ansi923_destroy(padpp_ansi923_padder_t ctx)
   {
     delete static_cast<Ansi923BytePadder*>(ctx);
   }
 
-  int
+  _PADPP_PUBLIC int
   padpp_ansi923_pad(padpp_ansi923_padder_t ctx, uint8_t* dst, size_t* dst_len,
                     const uint8_t* src, size_t src_len, size_t block_size)
   {
@@ -170,7 +174,7 @@ extern "C"
     }
   }
 
-  int
+  _PADPP_PUBLIC int
   padpp_ansi923_unpad(padpp_ansi923_padder_t ctx, uint8_t* dst, size_t* dst_len,
                       const uint8_t* src, size_t src_len, size_t block_size)
   {

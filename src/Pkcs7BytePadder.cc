@@ -1,6 +1,10 @@
-#include "../include/padpp/Pkcs7BytePadder.h"
+#define _PADPP_BUILDING
+
+#include "../include/padpp-c/Support.h"
+
 #include "../include/padpp-c/Pkcs7BytePadder.h"
 #include "../include/padpp/PadderFactory.h"
+#include "../include/padpp/Pkcs7BytePadder.h"
 
 namespace padpp
 {
@@ -102,7 +106,7 @@ using namespace padpp;
 
 extern "C"
 {
-  padpp_pkcs7_padder_t
+  _PADPP_PUBLIC padpp_pkcs7_padder_t
   padpp_pkcs7_create()
   {
     try
@@ -115,13 +119,13 @@ extern "C"
     }
   }
 
-  void
+  _PADPP_PUBLIC void
   padpp_pkcs7_destroy(padpp_pkcs7_padder_t ctx)
   {
     delete static_cast<Pkcs7BytePadder*>(ctx);
   }
 
-  int
+  _PADPP_PUBLIC int
   padpp_pkcs7_pad(padpp_pkcs7_padder_t ctx, uint8_t* dst, size_t* dst_len,
                   const uint8_t* src, size_t src_len, size_t block_size)
   {
@@ -149,7 +153,7 @@ extern "C"
     }
   }
 
-  int
+  _PADPP_PUBLIC int
   padpp_pkcs7_unpad(padpp_pkcs7_padder_t ctx, uint8_t* dst, size_t* dst_len,
                     const uint8_t* src, size_t src_len, size_t block_size)
   {

@@ -10,11 +10,12 @@
 #include "Exceptions.h"
 #include "IBytePadder.h"
 #include "Range.h"
+#include "Support.h"
 
 namespace padpp
 {
 
-struct Pkcs7BytePadder : public IBytePadder
+struct _PADPP_PUBLIC Pkcs7BytePadder : public IBytePadder
 {
   //
   // Public functions

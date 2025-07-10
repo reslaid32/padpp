@@ -1,5 +1,9 @@
-#include "../include/padpp/PadderFactory.h"
+#define _PADPP_BUILDING
+
+#include "../include/padpp-c/Support.h"
+
 #include "../include/padpp-c/PadderFactory.h"
+#include "../include/padpp/PadderFactory.h"
 #include <cstring>
 
 namespace padpp
@@ -51,7 +55,7 @@ using namespace padpp;
 
 extern "C"
 {
-  padpp_handle_t
+  _PADPP_PUBLIC padpp_handle_t
   padpp_create(const char* name)
   {
     if (!name)
@@ -66,14 +70,14 @@ extern "C"
     return handle;
   }
 
-  void
+  _PADPP_PUBLIC void
   padpp_destroy(padpp_handle_t padder)
   {
     if (padder)
       delete static_cast<PadderHandle*>(padder);
   }
 
-  int
+  _PADPP_PUBLIC int
   padpp_pad(padpp_handle_t padder, uint8_t* dst, size_t* dst_len,
             const uint8_t* src, size_t src_len, size_t block_size)
   {
@@ -101,7 +105,7 @@ extern "C"
     }
   }
 
-  int
+  _PADPP_PUBLIC int
   padpp_unpad(padpp_handle_t padder, uint8_t* dst, size_t* dst_len,
               const uint8_t* src, size_t src_len, size_t block_size)
   {

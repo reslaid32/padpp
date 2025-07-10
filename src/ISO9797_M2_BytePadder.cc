@@ -1,5 +1,9 @@
-#include "../include/padpp/ISO9797_M2_BytePadder.h"
+#define _PADPP_BUILDING
+
+#include "../include/padpp-c/Support.h"
+
 #include "../include/padpp-c/ISO9797_M2_BytePadder.h"
+#include "../include/padpp/ISO9797_M2_BytePadder.h"
 #include "../include/padpp/PadderFactory.h"
 
 namespace padpp
@@ -57,7 +61,7 @@ using namespace padpp;
 
 extern "C"
 {
-  padpp_iso9797_m2_padder_t
+  _PADPP_PUBLIC padpp_iso9797_m2_padder_t
   padpp_iso9797_m2_create()
   {
     try
@@ -70,13 +74,13 @@ extern "C"
     }
   }
 
-  void
+  _PADPP_PUBLIC void
   padpp_iso9797_m2_destroy(padpp_iso9797_m2_padder_t ctx)
   {
     delete static_cast<ISO9797_M2_BytePadder*>(ctx);
   }
 
-  int
+  _PADPP_PUBLIC int
   padpp_iso9797_m2_pad(padpp_iso9797_m2_padder_t ctx, uint8_t* dst, size_t* dst_len,
                        const uint8_t* src, size_t src_len, size_t block_size)
   {
@@ -104,7 +108,7 @@ extern "C"
     }
   }
 
-  int
+  _PADPP_PUBLIC int
   padpp_iso9797_m2_unpad(padpp_iso9797_m2_padder_t ctx, uint8_t* dst,
                          size_t* dst_len, const uint8_t* src, size_t src_len,
                          size_t block_size)

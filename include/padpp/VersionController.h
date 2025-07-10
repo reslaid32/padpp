@@ -1,9 +1,11 @@
 #pragma once
 
+#include "Support.h"
+
 namespace padpp
 {
 
-struct Version
+struct _PADPP_PUBLIC Version
 {
   const unsigned char maj, min, pat;
 
