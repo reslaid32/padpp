@@ -106,8 +106,8 @@ using namespace padpp;
 
 extern "C"
 {
-  _PADPP_PUBLIC padpp_pkcs7_padder_t
-  padpp_pkcs7_create()
+  _PADPP_PUBLIC padpp_handle_t
+  padpp_create_pkcs7()
   {
     try
     {
@@ -120,13 +120,13 @@ extern "C"
   }
 
   _PADPP_PUBLIC void
-  padpp_pkcs7_destroy(padpp_pkcs7_padder_t ctx)
+  padpp_destroy_pkcs7(padpp_handle_t ctx)
   {
     delete static_cast<Pkcs7BytePadder*>(ctx);
   }
 
   _PADPP_PUBLIC int
-  padpp_pkcs7_pad(padpp_pkcs7_padder_t ctx, uint8_t* dst, size_t* dst_len,
+  padpp_pad_pkcs7(padpp_handle_t ctx, uint8_t* dst, size_t* dst_len,
                   const uint8_t* src, size_t src_len, size_t block_size)
   {
     if (!ctx || !dst || !dst_len || !src)
@@ -154,7 +154,7 @@ extern "C"
   }
 
   _PADPP_PUBLIC int
-  padpp_pkcs7_unpad(padpp_pkcs7_padder_t ctx, uint8_t* dst, size_t* dst_len,
+  padpp_unpad_pkcs7(padpp_handle_t ctx, uint8_t* dst, size_t* dst_len,
                     const uint8_t* src, size_t src_len, size_t block_size)
   {
     if (!ctx || !dst || !dst_len || !src)

@@ -1,10 +1,12 @@
-/*
- * C-API of Ansi923BytePadder
- * On PadderFactory with name "ansi923"
+/**
+ * @file Ansi923BytePadder.h
+ * @ingroup capi
+ * @brief C API for ANSI X9.23 padding padder in padpp.
+ *
+ * This header defines a C interface for the ANSI X9.23 padding algorithm.
+ *
+ * It can also be created via the generic PadderFactory using the name `"ansi923"`.
  */
-
-// Commited by reslaid32
-// ANSI 9.23 Padder
 
 #ifndef PADPPC_ANSI923_BYTE_PADDER_C_H
 #define PADPPC_ANSI923_BYTE_PADDER_C_H
@@ -12,24 +14,64 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "Support.h"
+#include "./Support.h"
+#include "./Type.h"
+
+/**
+ * @defgroup capi C API
+ * @brief Public C interface for the padpp library.
+ * @{
+ */
 
 _PADPP_EXTERN_C _PADPP_CXX_only({)
 
-  typedef void* padpp_ansi923_padder_t;
+/**
+ * @brief Creates a new ANSI923 padder instance.
+ *
+ * @return A handle to the padder, or NULL on failure.
+ */
+_PADPP_PUBLIC padpp_handle_t padpp_create_ansi923(void);
 
-  _PADPP_PUBLIC padpp_ansi923_padder_t padpp_ansi923_create();
-  _PADPP_PUBLIC void padpp_ansi923_destroy(padpp_ansi923_padder_t ctx);
+  /**
+   * @brief Destroys an ANSI923 padder instance.
+   *
+   * @param ctx The padder handle to destroy.
+   */
+  _PADPP_PUBLIC void padpp_destroy_ansi923(padpp_handle_t ctx);
 
-  _PADPP_PUBLIC int padpp_ansi923_pad(padpp_ansi923_padder_t ctx, uint8_t* dst,
+  /**
+   * @brief Applies ANSI X9.23 padding to input data.
+   *
+   * @param ctx         Padder context.
+   * @param dst         Output buffer for padded data.
+   * @param dst_len     Input: max size of `dst`; Output: actual padded size.
+   * @param src         Input buffer to be padded.
+   * @param src_len     Length of input buffer.
+   * @param block_size  Padding block size.
+   * @return 0 on success, non-zero on error.
+   */
+  _PADPP_PUBLIC int padpp_pad_ansi923(padpp_handle_t ctx, uint8_t* dst,
                                       size_t* dst_len, const uint8_t* src,
                                       size_t src_len, size_t block_size);
 
-  _PADPP_PUBLIC int padpp_ansi923_unpad(padpp_ansi923_padder_t ctx, uint8_t* dst,
+  /**
+   * @brief Removes ANSI X9.23 padding from input data.
+   *
+   * @param ctx         Padder context.
+   * @param dst         Output buffer for unpadded data.
+   * @param dst_len     Input: max size of `dst`; Output: actual unpadded size.
+   * @param src         Input buffer with padded data.
+   * @param src_len     Length of input buffer.
+   * @param block_size  Block size originally used for padding.
+   * @return 0 on success, non-zero on error.
+   */
+  _PADPP_PUBLIC int padpp_unpad_ansi923(padpp_handle_t ctx, uint8_t* dst,
                                         size_t* dst_len, const uint8_t* src,
                                         size_t src_len, size_t block_size);
 
 _PADPP_CXX_only(
 })
 
-#endif
+/** @} */ // end of capi
+
+#endif // PADPPC_ANSI923_BYTE_PADDER_C_H

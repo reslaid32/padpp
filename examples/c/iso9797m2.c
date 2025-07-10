@@ -7,7 +7,7 @@
 int
 main(void)
 {
-  padpp_iso9797_m2_padder_t padder = padpp_iso9797_m2_create();
+  padpp_handle_t padder = padpp_create_iso9797_m2();
   if (!padder)
   {
     fprintf(stderr, "Failed to create padder context\n");
@@ -21,14 +21,14 @@ main(void)
   uint8_t padded[64];
   size_t padded_len = sizeof(padded);
 
-  int pad_result = padpp_iso9797_m2_pad(padder, padded, &padded_len,
+  int pad_result = padpp_pad_iso9797_m2(padder, padded, &padded_len,
                                         (const uint8_t*) message,
                                         strlen(message), block_size);
 
   if (pad_result != 0)
   {
     fprintf(stderr, "Padding failed: error code %d\n", pad_result);
-    padpp_iso9797_m2_destroy(padder);
+    padpp_destroy_iso9797_m2(padder);
     return 1;
   }
 
@@ -41,13 +41,13 @@ main(void)
   uint8_t unpadded[64];
   size_t unpadded_len = sizeof(unpadded);
 
-  int unpad_result = padpp_iso9797_m2_unpad(padder, unpadded, &unpadded_len,
+  int unpad_result = padpp_unpad_iso9797_m2(padder, unpadded, &unpadded_len,
                                             padded, padded_len, block_size);
 
   if (unpad_result != 0)
   {
     fprintf(stderr, "Unpadding failed: error code %d\n", unpad_result);
-    padpp_iso9797_m2_destroy(padder);
+    padpp_destroy_iso9797_m2(padder);
     return 1;
   }
 
@@ -55,6 +55,6 @@ main(void)
   fwrite(unpadded, 1, unpadded_len, stdout);
   printf("\n");
 
-  padpp_iso9797_m2_destroy(padder);
+  padpp_destroy_iso9797_m2(padder);
   return 0;
 }

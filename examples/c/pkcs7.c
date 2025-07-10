@@ -1,3 +1,4 @@
+#include "padpp-c/Pkcs7BytePadder.h"
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
@@ -7,7 +8,7 @@
 int
 main(void)
 {
-  padpp_pkcs7_padder_t padder = padpp_pkcs7_create();
+  padpp_handle_t padder = padpp_create_pkcs7();
   if (!padder)
   {
     fprintf(stderr, "Failed to create padder context\n");
@@ -22,13 +23,13 @@ main(void)
   size_t padded_len = sizeof(padded);
 
   int pad_result =
-      padpp_pkcs7_pad(padder, padded, &padded_len, (const uint8_t*) message,
+      padpp_pad_pkcs7(padder, padded, &padded_len, (const uint8_t*) message,
                       strlen(message), block_size);
 
   if (pad_result != 0)
   {
     fprintf(stderr, "Padding failed: error code %d\n", pad_result);
-    padpp_pkcs7_destroy(padder);
+    padpp_destroy_pkcs7(padder);
     return 1;
   }
 
@@ -41,13 +42,13 @@ main(void)
   uint8_t unpadded[64];
   size_t unpadded_len = sizeof(unpadded);
 
-  int unpad_result = padpp_pkcs7_unpad(padder, unpadded, &unpadded_len, padded,
+  int unpad_result = padpp_unpad_pkcs7(padder, unpadded, &unpadded_len, padded,
                                        padded_len, block_size);
 
   if (unpad_result != 0)
   {
     fprintf(stderr, "Unpadding failed: error code %d\n", unpad_result);
-    padpp_pkcs7_destroy(padder);
+    padpp_destroy_pkcs7(padder);
     return 1;
   }
 
@@ -55,6 +56,6 @@ main(void)
   fwrite(unpadded, 1, unpadded_len, stdout);
   printf("\n");
 
-  padpp_pkcs7_destroy(padder);
+  padpp_destroy_pkcs7(padder);
   return 0;
 }

@@ -61,8 +61,8 @@ using namespace padpp;
 
 extern "C"
 {
-  _PADPP_PUBLIC padpp_iso9797_m2_padder_t
-  padpp_iso9797_m2_create()
+  _PADPP_PUBLIC padpp_handle_t
+  padpp_create_iso9797_m2()
   {
     try
     {
@@ -75,13 +75,13 @@ extern "C"
   }
 
   _PADPP_PUBLIC void
-  padpp_iso9797_m2_destroy(padpp_iso9797_m2_padder_t ctx)
+  padpp_destroy_iso9797_m2(padpp_handle_t ctx)
   {
     delete static_cast<ISO9797_M2_BytePadder*>(ctx);
   }
 
   _PADPP_PUBLIC int
-  padpp_iso9797_m2_pad(padpp_iso9797_m2_padder_t ctx, uint8_t* dst, size_t* dst_len,
+  padpp_pad_iso9797_m2(padpp_handle_t ctx, uint8_t* dst, size_t* dst_len,
                        const uint8_t* src, size_t src_len, size_t block_size)
   {
     if (!ctx || !dst || !dst_len || !src)
@@ -109,9 +109,8 @@ extern "C"
   }
 
   _PADPP_PUBLIC int
-  padpp_iso9797_m2_unpad(padpp_iso9797_m2_padder_t ctx, uint8_t* dst,
-                         size_t* dst_len, const uint8_t* src, size_t src_len,
-                         size_t block_size)
+  padpp_unpad_iso9797_m2(padpp_handle_t ctx, uint8_t* dst, size_t* dst_len,
+                         const uint8_t* src, size_t src_len, size_t block_size)
   {
     if (!ctx || !dst || !dst_len || !src)
       return -1;

@@ -127,8 +127,8 @@ using namespace padpp;
 
 extern "C"
 {
-  _PADPP_PUBLIC padpp_ansi923_padder_t
-  padpp_ansi923_create()
+  _PADPP_PUBLIC padpp_handle_t
+  padpp_create_ansi923()
   {
     try
     {
@@ -141,13 +141,13 @@ extern "C"
   }
 
   _PADPP_PUBLIC void
-  padpp_ansi923_destroy(padpp_ansi923_padder_t ctx)
+  padpp_destroy_ansi923(padpp_handle_t ctx)
   {
     delete static_cast<Ansi923BytePadder*>(ctx);
   }
 
   _PADPP_PUBLIC int
-  padpp_ansi923_pad(padpp_ansi923_padder_t ctx, uint8_t* dst, size_t* dst_len,
+  padpp_pad_ansi923(padpp_handle_t ctx, uint8_t* dst, size_t* dst_len,
                     const uint8_t* src, size_t src_len, size_t block_size)
   {
     if (!ctx || !dst || !dst_len || !src)
@@ -175,7 +175,7 @@ extern "C"
   }
 
   _PADPP_PUBLIC int
-  padpp_ansi923_unpad(padpp_ansi923_padder_t ctx, uint8_t* dst, size_t* dst_len,
+  padpp_unpad_ansi923(padpp_handle_t ctx, uint8_t* dst, size_t* dst_len,
                       const uint8_t* src, size_t src_len, size_t block_size)
   {
     if (!ctx || !dst || !dst_len || !src)
