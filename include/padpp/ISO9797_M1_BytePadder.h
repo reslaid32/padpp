@@ -1,5 +1,7 @@
 /*
  * On PadderFactory with name "iso9797_m1"
+ *
+ * NOT UNIT TEST READY. ONE WAY PADDING.
  */
 
 // Commited by reslaid32
