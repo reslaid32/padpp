@@ -1,0 +1,7 @@
+message(STATUS "Uninstalling padpp...")
+
+file(REMOVE "@CMAKE_INSTALL_PREFIX@/lib/libpadpp.so")
+
+foreach(dir padpp padpp-c)
+  file(REMOVE_RECURSE "@CMAKE_INSTALL_PREFIX@/include/${dir}")
+endforeach()
